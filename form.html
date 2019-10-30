@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+
+    <style>
+        label {
+            width: 150px;
+            display: inline-block;
+        }
+        .brd{
+            border: solid black;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <h1>Конкурс на найліпшу свинку</h1>
+
+    <hr>
+
+    <nav>
+        <a href="index.html">ГОЛОВНА</a>
+        <hr>
+
+    </nav>
+    <div class="brd">
+    <section>
+        <h3>Опиши себе і свою красуню</h3>
+        <form action="https://formspree.io/xaywllla" method="POST">
+            <p>
+                <label>Напиши своє імя:</label>
+                <input name="name" type="text" placeholder="Імя" required autofocus>
+            </p>
+            <p>
+                <label>Напиши свою скриньку:</label>
+                <input name="mail" type="email" placeholder="Email" required>
+            </p>
+            <p>
+                <label>Напишіть свій пароль:</label>
+                <input name="pass" type="password" placeholder="пароль">
+            </p>
+            <p>
+                <label>Напиши свій тіліфон:</label>
+                <input name="phone" pattern="\+\d{5}[\s]?\d{3}[\s]?\d{2}[\s]?\d{2}" type="tel"
+                    placeholder="+380 і тд">
+            </p>
+
+
+            <label>Вкажи рід свинки</label>
+                <p>
+                <label>
+                    <input type="radio" name="gender" value="mail">Кнур
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female">Льоха
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other">"Єнчий?
+                </label>
+            </p>
+            <p>
+                <label>Як сі зве </label>
+                <input name="name"  type="text" placeholder="Імя" required autofocus>
+            </p>
+            <p>
+                <label>колір вочей:</label>
+                <input name="col" type="color" value="#33D1FF">
+            </p>
+            <p>
+                <label>Ріст (см):</label>
+                <input name="num" type="number" min="30">
+            </p>
+            <p>
+                <label>Скілько важить ():</label>
+                <input oninput="out.value=(ran.value); out2.value=(ran.value * 10)" name="ran" type="range" min="0"
+                    max="1000">
+                <br><br>
+                <label>Вкажіть ():</label>
+                <output name="out"> 300</output>кг
+                <br>
+            </p>
+
+            <p>
+                <input type="submit" value="send"> <input type="reset" value="clean">
+            </p>
+        </form>
+
+    </section>
+    </div>
+</body>
+
+</html>
